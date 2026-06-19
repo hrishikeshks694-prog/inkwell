@@ -1,0 +1,55 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#111;font-size:15px}
+.navbar{background:#fff;border-bottom:1px solid #e5e5e5;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:54px;position:sticky;top:0;z-index:100}
+.brand{font-size:18px;font-weight:600}
+#navActions{display:flex;align-items:center;gap:8px}
+.main{max-width:760px;margin:0 auto;padding:1.5rem}
+.page{display:none}.page.active{display:block}
+.auth-box{max-width:380px;margin:2rem auto}
+.tabs{display:flex;gap:0;border-bottom:1px solid #e5e5e5;margin-bottom:1.25rem}
+.tab{background:none;border:none;border-bottom:2px solid transparent;padding:8px 18px;font-size:14px;cursor:pointer;color:#666;transition:color .15s}
+.tab.active{color:#1a6ef7;border-bottom-color:#1a6ef7;font-weight:500}
+.card{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:1.25rem;margin-bottom:1rem}
+.card.clickable{cursor:pointer;transition:border-color .15s}.card.clickable:hover{border-color:#aaa}
+.form-group{margin-bottom:1rem}
+label{font-size:13px;color:#555;display:block;margin-bottom:4px}
+input,textarea,select{border:1px solid #ddd;border-radius:8px;padding:8px 12px;font-size:14px;width:100%;background:#fff;color:#111;font-family:inherit;outline:none;transition:border-color .15s}
+input:focus,textarea:focus{border-color:#1a6ef7;box-shadow:0 0 0 3px rgba(26,110,247,.1)}
+textarea{resize:vertical;line-height:1.7}
+.btn{border:1px solid #ddd;background:#fff;border-radius:8px;padding:7px 16px;font-size:13px;cursor:pointer;color:#111;transition:background .15s;font-family:inherit}
+.btn:hover{background:#f0f0f0}
+.btn.primary{background:#1a6ef7;color:#fff;border-color:#1a6ef7;font-weight:500}
+.btn.primary:hover{background:#145ed4}
+.btn.danger{color:#c0392b;border-color:#c0392b}.btn.danger:hover{background:#fff0f0}
+.btn.sm{padding:4px 10px;font-size:12px}
+.btn.full{width:100%}
+.page-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem}
+.page-header h1,.page-header h2{font-size:20px;font-weight:600}
+.row-end{display:flex;justify-content:flex-end;gap:8px;margin-top:.5rem}
+.hint{font-size:12px;color:#888;text-align:center;margin-top:10px}
+.alert{border-radius:8px;padding:10px 14px;font-size:13px;margin-bottom:1rem}
+.alert.error{background:#fff0f0;color:#c0392b;border:1px solid #f5c6c6}
+.alert.success{background:#f0fff4;color:#27ae60;border:1px solid #b2dfdb}
+.post-title{font-size:16px;font-weight:600;margin-bottom:6px}
+.post-excerpt{font-size:13px;color:#555;line-height:1.6;margin-bottom:10px}
+.post-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.avatar{width:32px;height:32px;border-radius:50%;background:#dbeafe;color:#1a6ef7;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
+.avatar.lg{width:48px;height:48px;font-size:18px}
+.muted{font-size:13px;color:#888}
+.tag{background:#f0f4ff;color:#2563eb;font-size:11px;padding:2px 8px;border-radius:999px;display:inline-block;margin-right:4px}
+.like-btn{background:none;border:1px solid #ddd;border-radius:999px;padding:5px 14px;font-size:12px;cursor:pointer;color:#666;transition:all .15s}
+.like-btn.liked{color:#e74c3c;border-color:#f5a0a0;background:#fff5f5}
+.like-btn:hover{border-color:#aaa}
+.comment{display:flex;gap:10px;margin-bottom:1rem}
+.comment-content{flex:1}
+.comment-name{font-size:13px;font-weight:600}
+.comment-text{font-size:13px;color:#444;line-height:1.6;margin-top:2px}
+.divider{border:none;border-top:1px solid #e5e5e5;margin:1.25rem 0}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1.25rem}
+.stat-card{background:#f8f8f8;border-radius:10px;padding:1rem}
+.stat-label{font-size:12px;color:#888;margin-bottom:4px}
+.stat-value{font-size:22px;font-weight:600}
+.empty{text-align:center;padding:3rem 1rem;color:#999;font-size:14px}
+.row{display:flex;align-items:center;gap:8px}
+.flex1{flex:1}
+h2.section{font-size:15px;font-weight:600;margin-bottom:.75rem}

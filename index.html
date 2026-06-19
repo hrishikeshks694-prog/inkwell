@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Inkwell — Blog Platform</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <div class="brand">✍️ Inkwell</div>
+  <div id="navActions"></div>
+</nav>
+
+<main class="main">
+  <div class="page active" id="page-auth">
+    <div class="auth-box">
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('login',this)">Sign in</button>
+        <button class="tab" onclick="switchTab('register',this)">Register</button>
+      </div>
+      <div id="authAlert"></div>
+      <div id="loginForm">
+        <div class="form-group"><label>Username</label><input id="loginUser" placeholder="username"/></div>
+        <div class="form-group"><label>Password</label><input id="loginPass" type="password" placeholder="password"/></div>
+        <button class="btn primary full" onclick="doLogin()">Sign in</button>
+        <p class="hint">Demo: <b>alice / alice123</b> &nbsp;|&nbsp; <b>bob / bob123</b></p>
+      </div>
+      <div id="registerForm" style="display:none">
+        <div class="form-group"><label>Username</label><input id="regUser" placeholder="choose a username"/></div>
+        <div class="form-group"><label>Email</label><input id="regEmail" type="email" placeholder="you@example.com"/></div>
+        <div class="form-group"><label>Password</label><input id="regPass" type="password" placeholder="min 6 chars"/></div>
+        <button class="btn primary full" onclick="doRegister()">Create account</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="page-feed">
+    <div class="page-header">
+      <div><h1>Feed</h1><p class="muted">Latest from the community</p></div>
+      <button class="btn primary" onclick="openEditor()">+ New post</button>
+    </div>
+    <div id="feedContent"></div>
+  </div>
+
+  <div class="page" id="page-editor">
+    <div class="page-header">
+      <button class="btn" onclick="showPage('feed')">← Back</button>
+      <h2 id="editorHeading">New post</h2>
+    </div>
+    <div class="card">
+      <div id="editorAlert"></div>
+      <div class="form-group"><label>Title</label><input id="postTitle" placeholder="A great title…"/></div>
+      <div class="form-group"><label>Tags (comma separated)</label><input id="postTags" placeholder="tech, life, design"/></div>
+      <div class="form-group"><label>Content</label><textarea id="postContent" rows="10" placeholder="Write your post…"></textarea></div>
+      <div class="row-end">
+        <button class="btn" onclick="showPage('feed')">Cancel</button>
+        <button class="btn primary" id="saveBtn" onclick="savePost()">Publish</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page" id="page-post">
+    <button class="btn" style="margin-bottom:1rem" onclick="showPage('feed')">← Back to feed</button>
+    <div id="postDetail"></div>
+  </div>
+
+  <div class="page" id="page-profile">
+    <div class="page-header">
+      <button class="btn" onclick="showPage('feed')">← Back</button>
+      <h2>My profile</h2>
+    </div>
+    <div id="profileContent"></div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
